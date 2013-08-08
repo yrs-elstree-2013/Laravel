@@ -14,11 +14,6 @@
   <link rel="stylesheet" href="./examples/assets/styles.css">
   <script type="javascript">
 	function plus() {
-	var f = document.getElementById('pop-login');
-	if (f.style.visibility == 'hidden') {
-		f.style.visibility = 'visible';
-	}else{
-		f.style.visibility = 'hidden';
-		}
+	if (document.getElementById('pop-login').style.visibility == 'hidden') {document.getElementById('pop-login').style.visibility = 'visible';}else{document.getElementById('pop-login').style.visibility = 'hidden';}
 	}
   </script>

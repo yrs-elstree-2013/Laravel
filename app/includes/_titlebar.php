@@ -14,7 +14,7 @@
                     <li <?php if ($isHome) { echo('class="active"'); } ?> ><a href="http://establish.dev/">Home</a></li>
                     <li><a href="http://establish.dev/info/about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <button type="button" class="btn btn-primary" onclick="plus()">Log in / Sign Up </button>
+                    <button type="button" class="btn btn-primary" onclick="if (document.getElementById('pop-login').style.visibility == 'hidden') {document.getElementById('pop-login').style.visibility = 'visible';}else{document.getElementById('pop-login').style.visibility = 'hidden';}">Log in / Sign Up </button>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
