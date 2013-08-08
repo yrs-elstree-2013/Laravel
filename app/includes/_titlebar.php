@@ -13,8 +13,24 @@
                 <ul class="nav navbar-nav">
                     <li <?php if ($isHome) { echo('class="active"'); } ?> ><a href="http://establish.dev/">Home</a></li>
                     <li <?php if ($title == 'About Us') { echo('class="active"'); } ?>><a href="http://establish.dev/info/about">About</a></li>
-                    <button type="button" class="btn btn-primary" onMouseOver="document.getElementById('pop-login').style.cssText = 'visibility:visible;' " onMouseOut="setTimeout(document.getElementById('pop-login').style.cssText = 'visibility:hidden;',1000) ">Log in / Sign Up </button>
+                    <li><a href="#contact">Contact</a></li>
+                    <button type="button" class="btn btn-primary"
+					onMouseOver="setTimeout(document.getElementById('pop-login').style.cssText = 'display:visible;',10000)"
+					onMouseOut="document.getElementById('pop-login').style.cssText = 'visibility:hidden;' ">Log in / Sign Up </button>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </div>
+	<div class="pop-login" id="pop-login" onMouseOver="document.getElementById('pop-login').style.cssText = 'visibility:visible;' " onMouseOut="document.getElementById('pop-login').style.cssText = 'visibility:hidden;' ">
+		<h4 style="padding:0 0 10px 0; margin:0;">login</h4>
+		<form>
+		Username: <input type="text" style="width:200;"/>
+		Password: <input type="text" style="width:200;"/>
+		<input type="submit" value="Login" class="btn"/>
+		</form>
+		<hr />
+		<div  style="text-align:center;">
+		<a href="#signup">Sign up</a> 
+		<a href="#forgotPass">Forgot password</a>
+		</div>
+	</div>
