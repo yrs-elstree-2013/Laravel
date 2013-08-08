@@ -20,15 +20,23 @@
         </div>
     </div>
 	<div class="pop-login" id="pop-login" alt="pop-login">
-		<h4 style="padding:0 0 10px 0; margin:0;">login</h4>
-		<form>
-		Username: <input type="text" style="width:200;"/>
-		Password: <input type="text" style="width:200;"/>
-		<input type="submit" value="Login" class="btn"/>
-		</form>
-		<hr />
-		<div  style="text-align:center;">
-		<a href="#signup">Sign up</a> 
-		<a href="#forgotPass">Forgot password</a>
+		<div class="col-lg-8" style="float:left;">
+			<h4 style="padding:0 0 10px 0; margin:0;">login</h4>
+			<form>
+			Username: <input type="text" style="width:200;"/>
+			Password: <input type="text" style="width:200;"/>
+			<input type="submit" value="Login" class="btn"/>
+			</form>
+			<div  style="text-align:left;">
+				<a href="#forgotPass">Forgot password</a>
+			</div>
+		</div>
+		<div class=".col-lg-8" style="float:right">
+			<h4 style="padding:0 0 10px 0; margin:0;">Signup</h4>
+			<form>
+			Username: <input type="text" style="width:200;"/>
+			Password: <input type="text" style="width:200;"/>
+			<input type="submit" value="Signup" class="btn"/>
+			</form>
 		</div>
 	</div>
