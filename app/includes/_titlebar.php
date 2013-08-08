@@ -17,8 +17,7 @@
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
-    </div>
-	<div class="pop-login col-lg-12" id="pop-login" alt="pop-login" style="display: hidden">s
+	<div class="pop-login col-lg-12" id="pop-login" alt="pop-login" style="display: hidden">
 		<div class="col-lg-6" style="float:left;">
 			<form>
 				<fieldset>
@@ -40,7 +39,7 @@
 				</fieldset>
 			</form>
 		</div>
-		<div class="col-lg-6" style="float:right">
+		<div class="col-lg-6" style="float:right; margin:-10px 0 0 0;">
 			<form>
 				<fieldset>
 					<legend>Regisiter</legend>
@@ -62,3 +61,4 @@
 			</form>
 		</div>
 	</div>
+    </div>

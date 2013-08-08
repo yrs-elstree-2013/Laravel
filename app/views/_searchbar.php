@@ -11,7 +11,7 @@
                     </span>
             </div><!-- /input-group -->
             <div>
-                <center>
+                <center style="font-size:14px;">
                     <input checked="true" id="type" type="radio" name="sex" value="male">Projects</input>
                     <input id="type" type="radio" name="sex" value="female">Properties</input>
                 </center>
