@@ -16,7 +16,7 @@ class ProjectController extends BaseController {
     }
 
     public function showProject( $project_title ) {
-        $project = Project::where('title', '=', $project_title)->get();
+        //$project = Project::where('title', '=', $project_title)->get();
         return View::make('project')->with('title', $project_title)->with('isHome', false);
     }
 
