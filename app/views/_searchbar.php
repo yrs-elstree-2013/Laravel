@@ -12,7 +12,7 @@
             </div><!-- /input-group -->
             <div>
                 <center>
-                    <input id="type" type="radio" name="sex" value="male">Projects</input>
+                    <input checked="true" id="type" type="radio" name="sex" value="male">Projects</input>
                     <input id="type" type="radio" name="sex" value="female">Properties</input>
                 </center>
             </div>
