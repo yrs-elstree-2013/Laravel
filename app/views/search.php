@@ -4,18 +4,20 @@
 
 <?php include(app_path().'/includes/_titlebar.php') ?>
 
-    <div class="jumbotron" style="font-size:24px;">
-        <h1 style="text-align:center">Find A Project!</h1>
+    <div class="jumbotron">
         <div class="row">
             <div class="col-lg-2">
 
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-8">
                 <div class="input-group">
+					<h4>Find A Project!</h4>
                     <input type="text" class="form-control" placeholder="Enter your Postcode! e.g. NW7 4HN">
 		      <span class="input-group-btn">
 		        <button class="btn" style="background-color: rgb(0, 150, 230);"type="button"><img src="/img/glyphicons_242_google_maps.png" /></button>
 		      </span>
+			  <input type="radio" name="sex" value="male">Projects
+			  <input type="radio" name="sex" value="female">Properties
                 </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
@@ -23,7 +25,7 @@
 
     <div class="body-content">
 		<ol>
-			<li style="list-style-type: none; float:left;">
+			<li style="list-style-type: none; float:left; padding:0 0 10px;">
 			<a href="#link"><h5 style="padding:0; margin:0; font-size:16pt;">Title</h5></a>
 			<p style="padding:0; margin:0; width:65%; float:left;">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget nunc massa. Proin ultricies tellus elementum tellus suscipit, eget aliquam erat vehicula. Maecenas scelerisque risus nisl, ut eleifend diam egestas ut. Aenean vel elit mattis, laoreet mauris non, lacinia diam. Praesent quam libero, fringilla ut libero vitae, rhoncus venenatis lorem. Praesent vitae euismod sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
