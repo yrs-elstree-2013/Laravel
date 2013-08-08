@@ -33,10 +33,12 @@
     <div class="body-content">
 		<ol>
 			<?php
-                foreach($results as $property) {
+                if($results != null) {
+                    foreach($results as $property) {
 
-                    echo View::make('_result')->with('result_title', $property->postcode)->with('result_body', 'Dynamic body bitches')->with($result_link, URL::to('/property/'.$property->id));
+                        echo View::make('_result')->with('result_title', $property->postcode)->with('result_body', 'Dynamic body bitches')->with('result_link', URL::to('/property/'.$property->id));
 
+                    }
                 }
             ?>
 		</ol>

@@ -1,6 +1,7 @@
 from postcodes import PostCoder
 import json
 import socket
+import sys
 
 def PostcodeInfo(Postcode):
 	Postcode = Postcode.upper()
@@ -34,6 +35,5 @@ def PostcodeInfo(Postcode):
 	# print write_to_file
 
 
-print 'Search info about Postcode:'
-Postcode = raw_input()
+Postcode = sys.argv[1]
 print PostcodeInfo(Postcode)
