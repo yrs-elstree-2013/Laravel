@@ -2,27 +2,8 @@
 </head>
 
 <?php include(app_path().'/includes/_titlebar.php') ?>
-    <!-- Jumbotron -->
-    <div class="jumbotron">
-        <h1 style="text-align:center">Find A Project!</h1>
-        <div class="row">
-            <div class="col-lg-2">
 
-            </div><!-- /.col-lg-6 -->
-            <div class="col-lg-8">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Enter your Postcode! e.g. NW7 4HN">
-		      <span class="input-group-btn">
-		        <button class="btn" style="background-color: rgb(0, 150, 230);"type="button"><img src="/img/glyphicons_242_google_maps.png" /></button>
-		      </span>
-                </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-
-    </div>
-
-
-    <div class="body-content">
+    <div class="body-content" style="padding:25px;">
 
         <!-- Example row of columns -->
         <div class="row">
