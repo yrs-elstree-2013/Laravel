@@ -44,5 +44,9 @@ The site also makes use of open data to provide both traders and investors with 
 How we use the data provided by you: <br /><br /> We will only use data provided by you to improve your experience on our website. We will not hand-over data provided by you to third parties.');
     }
 
+    public function getSignup() {
+        return View::make('cPanel')->with('isHome', false)->with('title', 'Test');
+    }
+
 
 }

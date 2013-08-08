@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-class Project {
+class Project extends Eloquent {
     protected $table = 'projects';
 
 

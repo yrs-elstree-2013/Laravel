@@ -14,12 +14,12 @@
                     <li <?php if ($isHome) { echo('class="active"'); } ?> ><a href="http://establish.dev/">Home</a></li>
                     <li <?php if ($title == 'About Us') { echo('class="active"'); } ?>><a href="http://establish.dev/info/about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <button type="button" class="btn btn-primary" onclick="if (document.getElementById('pop-login').style.display == 'none') {document.getElementById('pop-login').style.display = 'visible';}else{document.getElementById('pop-login').style.display = 'block';}">Log in / Sign Up </button>
+                    <button type="button" class="btn btn-primary" onclick="if (document.getElementById('pop-login').style.display == 'block') {document.getElementById('pop-login').style.display = 'none';}else{document.getElementById('pop-login').style.display = 'block';}">Log in / Sign Up </button>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </div>
-	<div class="pop-login col-lg-12" id="pop-login" alt="pop-login">
+	<div class="pop-login col-lg-12" id="pop-login" alt="pop-login" style="display: hidden">
 		<div class="col-lg-6" style="float:left;">
 			<h4 style="padding:0 0 10px 0; margin:0;">login</h4>
 			<form>

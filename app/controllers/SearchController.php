@@ -6,6 +6,7 @@
  * Time: 10:04
  * To change this template use File | Settings | File Templates.
  */
+//include app_path().'/lib/python/PythonLoad.php';
 
 class SearchController extends BaseController {
 
@@ -18,16 +19,16 @@ class SearchController extends BaseController {
 			return Redirect::to('search');
 		}
 		
-		$python = new lib.PythonLoad();
+		$python = new PythonLoad();
 		
 		$returnArray = array();				// THIS IS THE ARRAY CONTAINING POSTCODES WITHIN 5KM OF $query_string
 		
-		if($query_type == 'project') {
-			$pos = $python('PostCodesV5.py', $query_string);
-/* TODO */	$properties = // Array of properties
+		if($query_type == 'property') {
+			$pos = $python.RunPython('PostCodesV5.py', $query_string);
+        	$properties = Property::all();
 			$postcodes = array();
 			
-			for($properties as $p) { // Go through each property
+			foreach($properties as $p) { // Go through each property
 				$pc = $p->postcode;
 				
 				if(in_array($pc, $postcodes)){ // If postcode already in array
@@ -37,7 +38,7 @@ class SearchController extends BaseController {
 				}
 			}
 			
-			for($postcodes as $pc) {	// Go through postcodes
+			foreach($postcodes as $pc) {	// Go through postcodes
 				$p = $python('PostCodesV5.py', $pc);	// Get the lat/long of the postcode
 				$dist = distance($pos, $p);		// Get their distance from query postcode
 				
@@ -45,8 +46,10 @@ class SearchController extends BaseController {
 					array_push($returnArray, $pc);			// THINGS ARE ADDED TO RETURN ARRAY HERE
 				}
 			}
-		}else if($query_type == 'property') {
-			// TODO: Property search logic
+
+            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $properties);
+		}else if($query_type == 'project') {
+			// TODO: Project search logic
 		}else {
 			return Redirect::to('search');
 		}
@@ -75,4 +78,6 @@ class SearchController extends BaseController {
 
 		return ($miles ? ($km * 0.621371192) : $km);
 	}
+
+
 }

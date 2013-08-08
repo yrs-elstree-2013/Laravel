@@ -13,8 +13,8 @@ class CreateProjectsTable extends Migration {
     {
         Schema::create('projects', function($table) {
 
-            $table->increments('id');
-            $table->string('weblink');
+            $table->increments('id')->primary();
+            $table->string('weblink')->unique();
 
             $table->string('title', 50);
             $table->string('slogan', 150);
