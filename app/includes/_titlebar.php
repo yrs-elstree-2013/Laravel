@@ -14,13 +14,13 @@
                     <li <?php if ($isHome) { echo('class="active"'); } ?> ><a href="http://establish.dev/">Home</a></li>
                     <li><a href="http://establish.dev/info/about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <button type="button" class="btn btn-primary" onclick="if (document.getElementById('pop-login').style.visibility == 'hidden') {document.getElementById('pop-login').style.visibility = 'visible';}else{document.getElementById('pop-login').style.visibility = 'hidden';}">Log in / Sign Up </button>
+                    <button type="button" class="btn btn-primary" onclick="if (document.getElementById('pop-login').style.display == 'none') {document.getElementById('pop-login').style.display = 'visible';}else{document.getElementById('pop-login').style.display = 'block';}">Log in / Sign Up </button>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </div>
-	<div class="pop-login" id="pop-login" alt="pop-login">
-		<div class="col-lg-8" style="float:left;">
+	<div class="pop-login col-lg-12" id="pop-login" alt="pop-login">
+		<div class="col-lg-6" style="float:left;">
 			<h4 style="padding:0 0 10px 0; margin:0;">login</h4>
 			<form>
 			Username: <input type="text" style="width:200;"/>
@@ -31,7 +31,7 @@
 				<a href="#forgotPass">Forgot password</a>
 			</div>
 		</div>
-		<div class=".col-lg-8" style="float:right">
+		<div class=".col-lg-6" style="float:right">
 			<h4 style="padding:0 0 10px 0; margin:0;">Signup</h4>
 			<form>
 			Username: <input type="text" style="width:200;"/>
