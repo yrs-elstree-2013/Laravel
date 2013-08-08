@@ -13,7 +13,7 @@
                 <ul class="nav navbar-nav">
                     <li <?php if ($isHome) { echo('class="active"'); } ?> ><a href="http://establish.dev/">Home</a></li>
                     <li <?php if ($title == 'About Us') { echo('class="active"'); } ?>><a href="http://establish.dev/info/about">About</a></li>
-                    <button type="button" class="btn btn-primary">Log in / Sign Up </button>
+                    <button type="button" class="btn btn-primary" onMouseOver="document.getElementById('pop-login').style.cssText = 'visibility:visible;' " onMouseOut="setTimeout(document.getElementById('pop-login').style.cssText = 'visibility:hidden;',1000) ">Log in / Sign Up </button>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
