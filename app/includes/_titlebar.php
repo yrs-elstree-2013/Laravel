@@ -31,7 +31,7 @@
 				<a href="#forgotPass">Forgot password</a>
 			</div>
 		</div>
-		<div class=".col-lg-6" style="float:right">
+		<div class="col-lg-6" style="float:right">
 			<h4 style="padding:0 0 10px 0; margin:0;">Signup</h4>
 			<form>
 			Username: <input type="text" style="width:200;"/>

@@ -13,6 +13,7 @@
 
 
 Route::get('project/{project_title}', 'ProjectController@showProject');
+Route::get('property/{property_title}', 'PropertyController@showProperty');
 Route::get('search/{type}/{query}', 'SearchController@search');
 Route::get('project', 'ProjectController');
 Route::controller('info', 'InformationController');
