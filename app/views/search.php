@@ -4,7 +4,7 @@
 
 <?php include(app_path().'/includes/_titlebar.php') ?>
 
-    <div class="jumbotron">
+    <div class="jumbotron" style="font-size:24px;">
         <h1 style="text-align:center">Find A Project!</h1>
         <div class="row">
             <div class="col-lg-2">
