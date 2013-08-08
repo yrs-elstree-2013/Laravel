@@ -6,25 +6,25 @@
  * Time: 10:04
  * To change this template use File | Settings | File Templates.
  */
-//include app_path().'/lib/python/PythonLoad.php';
 
 class SearchController extends BaseController {
 
     public function getIndex() {
-        return View::make('search')->with('isHome', false)->with('title', 'Establish.me Search');
+        return View::make('search')->with('isHome', false)->with('title', 'Establish.me Search')->with('results', null);
     }
 
-    public function search( $query_type, $query_string ) {
+    public function postIndex( ) {
+        return 'yes';
+        $query_type = Input::get('type');
+        $query_string = Input::get('query');
 		if(!is_string($query_type)) {
 			return Redirect::to('search');
 		}
 		
-		$python = new PythonLoad();
-		
 		$returnArray = array();				// THIS IS THE ARRAY CONTAINING POSTCODES WITHIN 5KM OF $query_string
 		
 		if($query_type == 'property') {
-			$pos = $python.RunPython('PostCodesV5.py', $query_string);
+			$pos = $this->runPython('PostCodesV5.py', $query_string);
         	$properties = Property::all();
 			$postcodes = array();
 			
@@ -39,15 +39,15 @@ class SearchController extends BaseController {
 			}
 			
 			foreach($postcodes as $pc) {	// Go through postcodes
-				$p = $python('PostCodesV5.py', $pc);	// Get the lat/long of the postcode
-				$dist = distance($pos, $p);		// Get their distance from query postcode
+				$p = $this->runPython('PostCodesV5.py', $pc);	// Get the lat/long of the postcode
+				$dist = $this->distance($pos, $p);		// Get their distance from query postcode
 				
 				if($dist < 5) {
 					array_push($returnArray, $pc);			// THINGS ARE ADDED TO RETURN ARRAY HERE
 				}
 			}
 
-            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $properties);
+            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $returnArray);
 		}else if($query_type == 'project') {
 			// TODO: Project search logic
 		}else {
@@ -55,7 +55,7 @@ class SearchController extends BaseController {
 		}
     }
 	
-	private function distance($pos, $property, $miles = false)
+	public function distance($pos, $property, $miles = false)
 	{
 		$lat1 = $pos['lat'];
 		$lng1 = $pos['lng'];
@@ -79,5 +79,11 @@ class SearchController extends BaseController {
 		return ($miles ? ($km * 0.621371192) : $km);
 	}
 
+    public function runPython($path, $args)
+    {
+        $result = exec(app_path().'python/'.$path.' '.$args);
+        return json_decode($result);
+        //return $result;
+    }
 
 }

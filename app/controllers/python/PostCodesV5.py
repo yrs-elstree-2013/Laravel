@@ -35,6 +35,5 @@ def PostcodeInfo(Postcode):
 	# print write_to_file
 
 
-# print 'Search info about Postcode:'
 Postcode = sys.argv[1]
 print PostcodeInfo(Postcode)
