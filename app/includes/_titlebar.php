@@ -19,7 +19,7 @@
             </div><!--/.nav-collapse -->
         </div>
     </div>
-	<div class="pop-login" id="pop-login">
+	<div class="pop-login" id="pop-login" onMouseOver="document.getElementById('pop-login').style.cssText = 'visibility:visible;' " onMouseOut="document.getElementById('pop-login').style.cssText = 'visibility:hidden;' ">
 		<h4 style="padding:0 0 10px 0; margin:0;">login</h4>
 		<form>
 		Username: <input type="text" style="width:200;"/>
