@@ -1,7 +1,6 @@
 <?php include(app_path() . '/includes/_header.php') ?>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
     </script>
-
     <script>
         function initialize()
         {
@@ -51,13 +50,13 @@
                         <h3 class="panel-title" style="text-align:left;">My Fantastic Photography Shop </h3>
                     </div>
                     <div>
-                        You should definitely fund this incredible project!
+                        You should definitely purchase this property!
                     </div>
                 </div>
 
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:left;">Existing businesses in the area</h3>
+                        <h3 class="panel-title" style="text-align:left;">Existing properties in the area</h3>
                     </div>
                     <div>
                         Yelp goes here
@@ -69,24 +68,21 @@
             <div class="col-lg-3">
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:center;">Curent Funding</h3>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" style="width: 60%"></div>
+                        <h3 class="panel-title" style="text-align:center;">Bids</h3>
                     </div>
                     <div style="text-align:center;">
-                        £60 of £300
+                        £70,000
                     </div>
 
                 </div>
 
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:center;">Donations</h3>
+                        <h3 class="panel-title" style="text-align:center;">Place a offer</h3>
                     </div>
                     <div style="text-align:center;">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="£10">
+                            <input type="text" class="form-control" placeholder="£67,775">
                           <span class="input-group-btn">
                             <button class="btn" style="background-color: rgb(0, 150, 230);"type="button"><img src="/img/glyphicons_458_money.png" /></button>
                           </span>
@@ -101,7 +97,6 @@
                     <div>
                         <div id="googleMap" style="width:100%;height:200px;"></div>
                     </div>
-
                 </div>
             </div>
 
