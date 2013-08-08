@@ -12,3 +12,13 @@
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
   <link rel="stylesheet" href="./examples/assets/prism.css">
   <link rel="stylesheet" href="./examples/assets/styles.css">
+  <script type="javascript">
+	function plus() {
+	var f = document.getElementById('pop-login');
+	if (f.style.visibility == 'hidden') {
+	   f.style.visibility = 'visible';
+	   }
+	else
+		f.style.visibility = 'hidden';
+	}
+  </script>
