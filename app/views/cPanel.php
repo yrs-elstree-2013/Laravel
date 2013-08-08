@@ -47,13 +47,13 @@
             <div class="col-lg-6">
                 <div class="title">Created Projects</div>
 					<ol>
-						<li style="list-style-type: none; float:left; padding:0 0 10px;">
+						<li style="list-style-type: none; float:left; padding:0;">
 							<a href="#link"><h5 style="padding:0; margin:0; font-size:16pt;">Project Name</h5></a>
 								<p style="padding:0; margin:0;">
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget nunc massa. Proin ultricies tellus elementum tellus suscipit, eget aliquam erat vehicula. Maecenas scelerisque risus nisl, ut eleifend diam egestas ut. Aenean vel elit mattis, laoreet mauris non, lacinia diam.
 								</p>
 						</li>
-						<li style="list-style-type: none; float:left; padding:0 0 10px;">
+						<li style="list-style-type: none; float:left; padding:0;">
 							<a href="#link"><h5 style="padding:0; margin:0; font-size:16pt;">Project Name</h5></a>
 								<p style="padding:0; margin:0;">
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget nunc massa. Proin ultricies tellus elementum tellus suscipit, eget aliquam erat vehicula. Maecenas scelerisque risus nisl, ut eleifend diam egestas ut. Aenean vel elit mattis, laoreet mauris non, lacinia diam.
