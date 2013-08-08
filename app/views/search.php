@@ -16,11 +16,11 @@
 		      <span class="input-group-btn">
 		        <button class="btn" style="background-color: rgb(0, 150, 230);"type="button"><img src="/img/glyphicons_242_google_maps.png" /></button>
 		      </span>
+              </div><!-- /input-group -->
 			  <center>
 			  <input type="radio" name="sex" value="male">Projects
 			  <input type="radio" name="sex" value="female">Properties
 			  </center>
-                </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
     </div>
