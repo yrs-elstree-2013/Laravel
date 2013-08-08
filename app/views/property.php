@@ -91,11 +91,22 @@
 
                 </div>
                 <div class="panel">
+                    <h3 class="panel-title" style="text-align:center;">Google Maps</h3>
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:center;">Location</h3>
                     </div>
                     <div>
                         <div id="googleMap" style="width:100%;height:200px;"></div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h3 class="panel-title" style="text-align:center;">Projects</h3>
+                    <div class="panel-heading">
+                    </div>
+                    <div>
+						<table class="table table-hover">
+							<tr><td>Project Name</td><td>Project category</td></tr>
+							<tr><td>Project x</td><td>No category</td></tr>
+						</table>
                     </div>
                 </div>
             </div>
