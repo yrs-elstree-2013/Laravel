@@ -20,8 +20,8 @@
                     </div><!-- /input-group -->
 				  <div>
 					  <center>
-						  <input id="projects" type="radio" name="sex" value="male">Projects</input>
-						  <input id="properties" type="radio" name="sex" value="female">Properties</input>
+						  <input id="type" type="radio" name="sex" value="male">Projects</input>
+						  <input id="type" type="radio" name="sex" value="female">Properties</input>
 					  </center>
 				  </div>
 				</form>
