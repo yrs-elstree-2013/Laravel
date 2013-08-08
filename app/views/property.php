@@ -92,7 +92,7 @@
                 </div>
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:center;">Google Maps</h3>
+                        <h3 class="panel-title" style="text-align:center;">Location</h3>
                     </div>
                     <div>
                         <div id="googleMap" style="width:100%;height:200px;"></div>
