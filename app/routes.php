@@ -13,7 +13,10 @@
 
 
 Route::get('project/{project_title}', 'ProjectController@showProject');
+Route::get('search/{type}/{query}', 'SearchController@search');
 Route::get('project', 'ProjectController');
+Route::controller('info', 'InformationController');
+Route::controller('search', 'SearchController');
 
 Route::group(array('domain' => '{project_title}.establish.dev'), function()
 {

@@ -5,9 +5,9 @@
         <div class="nav-collapse collapse col-lg-5">
             <ul class="nav navbar-nav text-center" style=" width:100%; ">
 
-                <li style="border-right:1px solid #000; margin:5px 0 5px 0; padding:0;"><a href="#terms">Terms &amp; Services</a></li>
-                <li style="border-right:1px solid #000; margin:5px 0 5px 0;"><a href="#Privacy">Privacy</a></li>
-                <li style="margin:5px 0 5px 0;"><a href="#about">About Us</a></li>
+                <li style="border-right:1px solid #000; margin:5px 0 5px 0; padding:0;"><a href="http://establish.dev/info/tos">Terms &amp; Services</a></li>
+                <li style="border-right:1px solid #000; margin:5px 0 5px 0;"><a href="http://establish.dev/info/privacypolicy">Privacy</a></li>
+                <li style="margin:5px 0 5px 0;"><a href="http://establish.dev/info/about">About Us</a></li>
 
             </ul>
         </div><!--/.nav-collapse -->
