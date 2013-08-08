@@ -10,7 +10,7 @@
 class SearchController extends BaseController {
 
     public function getIndex() {
-        return Redirect::to('home');
+        return View::make('search')->with('isHome', false)->with('title', 'Establish.me Search');
     }
 
     public function search( $query_type, $query_string ) {

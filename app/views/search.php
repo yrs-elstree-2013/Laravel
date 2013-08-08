@@ -5,23 +5,27 @@
 <?php include(app_path().'/includes/_titlebar.php') ?>
 
     <div class="jumbotron">
+
         <div class="row">
             <div class="col-lg-2">
-
+                <h4>Search</h4>
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-8">
+
                 <div class="input-group">
-					<h4>Search:</h4>
+
                     <input type="text" class="form-control" placeholder="Enter your Postcode! e.g. NW7 4HN">
-		      <span class="input-group-btn">
-		        <button class="btn" style="background-color: rgb(0, 150, 230);"type="button">
-				<img src="/img/glyphicons_242_google_maps.png" /></button>
-		      </span>
+                    <span class="input-group-btn">
+                        <button class="btn" style="background-color: rgb(0, 150, 230);"type="button">
+                        <img src="/img/glyphicons_242_google_maps.png" /></button>
+                    </span>
               </div><!-- /input-group -->
-			  <center>
-			  <input type="radio" name="sex" value="male">Projects
-			  <input type="radio" name="sex" value="female">Properties
-			  </center>
+              <div>
+                  <center>
+                      <input type="radio" name="sex" value="male">Projects</input>
+                      <input type="radio" name="sex" value="female">Properties</input>
+                  </center>
+              </div>
             </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
     </div>

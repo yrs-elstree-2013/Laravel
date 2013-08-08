@@ -49,7 +49,7 @@
                 <h2>Our Mission</h2>
                 <p style="text-align:justify;text-justify:inter-word;">Establish.Me is an ambitious project which aims to unite local councils, residents and locally based new businesses and take advantage of the ever growing number of empty shop spaces in our high streets.
                     With the cooperation of councils Establish.Me will give new start ups the chance to create a "Project Page" on the site which will allow them to pitch their business to the local community.  In turn the community, may donate towards the business.  These donations go towards paying for a 3-6 month period of rent for a dis-used shop front in the local high street.</p>
-                <p><a class="btn btn-default" href="#">Read More &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://establish.dev/info/about">Read More &raquo;</a></p>
             </div>
             <div class="col-lg-8">
                 <div id="googleMap" style="width:100%;height:480px;"></div>
