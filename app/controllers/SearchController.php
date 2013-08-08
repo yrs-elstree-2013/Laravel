@@ -14,7 +14,6 @@ class SearchController extends BaseController {
     }
 
     public function postIndex( ) {
-        return 'yes';
         $query_type = Input::get('type');
         $query_string = Input::get('query');
 		if(!is_string($query_type)) {
