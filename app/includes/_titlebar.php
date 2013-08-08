@@ -19,24 +19,47 @@
             </div><!--/.nav-collapse -->
         </div>
     </div>
-	<div class="pop-login col-lg-12" id="pop-login" alt="pop-login" style="display: hidden">
+	<div class="pop-login col-lg-12" id="pop-login" alt="pop-login" style="display: hidden">s
 		<div class="col-lg-6" style="float:left;">
-			<h4 style="padding:0 0 10px 0; margin:0;">login</h4>
 			<form>
-			Username: <input type="text" style="width:200;"/>
-			Password: <input type="text" style="width:200;"/>
-			<input type="submit" value="Login" class="btn"/>
+				<fieldset>
+					<legend>Sign in</legend>
+					<div class="form-group">
+						<label for="exampleInputEmail">Email address</label>
+						<input type="text" class="form-control" placeholder="email@address.com">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword">Password</label>
+						<input type="password" class="form-control" placeholder="user password">
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Remember me
+						</label>
+					</div>
+					<button type="submit" class="btn btn-default">Sign in</button>
+				</fieldset>
 			</form>
-			<div  style="text-align:left;">
-				<a href="#forgotPass">Forgot password</a>
-			</div>
 		</div>
 		<div class="col-lg-6" style="float:right">
-			<h4 style="padding:0 0 10px 0; margin:0;">Signup</h4>
 			<form>
-			Username: <input type="text" style="width:200;"/>
-			Password: <input type="text" style="width:200;"/>
-			<input type="submit" value="Signup" class="btn"/>
+				<fieldset>
+					<legend>Regisiter</legend>
+					<div class="form-group">
+						<label for="exampleInputEmail">Email address</label>
+						<input type="text" class="form-control" placeholder="email@address.com">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword">Password</label>
+						<input type="password" class="form-control" placeholder="user password">
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> I agree to the T&C's
+						</label>
+					</div>
+					<button type="submit" class="btn btn-default">Register</button>
+				</fieldset>
 			</form>
 		</div>
 	</div>
