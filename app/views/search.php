@@ -15,7 +15,7 @@
                 <div class="input-group">
                     <input id="query" type="text" class="form-control" placeholder="Enter your Postcode! e.g. NW7 4HN">
                     <span class="input-group-btn">
-                        <button class="btn" style="background-color: rgb(0, 150, 230);"type="button">
+                        <button class="btn" style="background-color: rgb(0, 150, 230);"type="submit">
                         <img src="/img/glyphicons_242_google_maps.png" /></button>
                     </span>
               </div><!-- /input-group -->
