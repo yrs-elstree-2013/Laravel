@@ -14,14 +14,12 @@
                     <li <?php if ($isHome) { echo('class="active"'); } ?> ><a href="http://establish.dev/">Home</a></li>
                     <li><a href="http://establish.dev/info/about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <button type="button" class="btn btn-primary"
-					onMouseOver="setTimeout(document.getElementById('pop-login').style.cssText = 'display:visible;',10000)"
-					onMouseOut="document.getElementById('pop-login').style.cssText = 'visibility:hidden;' ">Log in / Sign Up </button>
+                    <button type="button" class="btn btn-primary" onClick="plus();">Log in / Sign Up </button>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </div>
-	<div class="pop-login" id="pop-login" onMouseOver="document.getElementById('pop-login').style.cssText = 'visibility:visible;' " onMouseOut="document.getElementById('pop-login').style.cssText = 'visibility:hidden;' ">
+	<div class="pop-login" id="pop-login">
 		<h4 style="padding:0 0 10px 0; margin:0;">login</h4>
 		<form>
 		Username: <input type="text" style="width:200;"/>
