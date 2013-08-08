@@ -62,7 +62,6 @@
                         Yelp goes here
                     </div>
                 </div>
-
             </div>
 
             <div class="col-lg-3">
@@ -73,7 +72,6 @@
                     <div style="text-align:center;">
                         £70,000
                     </div>
-
                 </div>
 
                 <div class="panel">
@@ -88,8 +86,8 @@
                           </span>
                         </div><!-- /input-group -->
                     </div>
-
                 </div>
+				
                 <div class="panel">
                     <h3 class="panel-title" style="text-align:center;">Google Maps</h3>
                     <div class="panel-heading">
