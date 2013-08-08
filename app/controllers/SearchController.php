@@ -46,8 +46,12 @@ class SearchController extends BaseController {
 					array_push($returnArray, $pc);			// THINGS ARE ADDED TO RETURN ARRAY HERE
 				}
 			}
-
-            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $properties);
+			
+			if(empty($returnArray) {
+				return "null";
+			}
+			
+            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $returnArray);
 		}else if($query_type == 'project') {
 			// TODO: Project search logic
 		}else {
