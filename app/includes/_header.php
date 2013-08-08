@@ -16,9 +16,9 @@
 	function plus() {
 	var f = document.getElementById('pop-login');
 	if (f.style.visibility == 'hidden') {
-	   f.style.visibility = 'visible';
-	   }
-	else
+		f.style.visibility = 'visible';
+	}else{
 		f.style.visibility = 'hidden';
+		}
 	}
   </script>
