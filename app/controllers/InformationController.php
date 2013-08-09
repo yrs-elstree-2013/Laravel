@@ -20,7 +20,7 @@ With the cooperation of councils, Establish.Me will give new start ups the chanc
 The idea is that councils get businesses into empty properties they maybe struggling to fill. Meanwhile, local businesses have a chance to establish themselves within the community, and local residents can have a say on the type of companies they would like to have in their high street.
 <br /><br />
 The site also makes use of open data to provide both traders and investors with information about other businesses in the area and known crime rates, with both statistical and visual data.
-<br /><br />');
+<br /><br />')->with('user', Sentry::getUser());
     }
 
     public function getTos() {
@@ -36,16 +36,12 @@ The site also makes use of open data to provide both traders and investors with 
         <p>1. Users agree to provide their payment information at the time they pledge to a business</p>
         <p>2. Users must ensure they have sufficient funds available at the end of the bid so that their donation can be collected.</p>
         <p>3. Service available to individuals who are at least 18 years of age</p>
-        <br/>');
+        <br/>')->with('user', Sentry::getUser());
     }
 
     public function getPrivacypolicy() {
         return  View::make('article')->with('isHome', false)->with('title', 'Privacy')->with("content", 'We care about your welfare. Therefore, we have made a Privacy Policy page explaining what happens with your data that is collected from you on this website.<br />
-How we use the data provided by you: <br /><br /> We will only use data provided by you to improve your experience on our website. We will not hand-over data provided by you to third parties.');
-    }
-
-    public function getSignup() {
-        return View::make('cPanel')->with('isHome', false)->with('title', 'Test');
+How we use the data provided by you: <br /><br /> We will only use data provided by you to improve your experience on our website. We will not hand-over data provided by you to third parties.')->with('user', Sentry::getUser());
     }
 
 

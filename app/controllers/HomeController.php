@@ -18,7 +18,7 @@ class HomeController extends BaseController {
 	public function getIndex() {
 
 
-        return View::make('home')->with('title', 'Establish.me')->with('isHome', true);
+        return View::make('home')->with('title', 'Establish.me')->with('isHome', true)->with('user', Sentry::getUser());
 
     }
 

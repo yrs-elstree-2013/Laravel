@@ -120,9 +120,7 @@
                 </div>
             </div>
         </div>
-    </div>
 
-</div>
 
 <?php include(app_path().'/includes/_footer.php') ?>
 </div> <!-- /container -->
