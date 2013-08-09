@@ -17,10 +17,14 @@ class UserController extends BaseController {
         }
     }
 
+    public function postIndex() {
+        return Redirect::to('users');
+    }
+
     public function postLogin() {
-        Redirect::to('user');
         $username = Input::get('username');
         $password = Input::get('password');
+        $rememberme = Input::get('rememberme', true);
 
         if ( $username != null && $password != null ) {
 
@@ -35,7 +39,7 @@ class UserController extends BaseController {
                 // Try to authenticate the user
                 $user = Sentry::authenticate($credentials, false);
 
-                Sentry::login($user, Input::get('user_rememberme'));
+                Sentry::login($user, $rememberme);
 
                 return Redirect::to('user');
             }

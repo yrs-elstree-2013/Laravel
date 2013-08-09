@@ -22,7 +22,7 @@
                                             <form action="/user/login" method="post" accept-charset="UTF-8">
                                                 <label class="string optional" for="user_username"> Email:</label><input id="user_username" style="margin-bottom: 15px;" placeholder="email@address.com" type="text" name="username" size="30" />
                                                 <label class="string optional" for="user_password"> Password:</label><input id="user_password" style="margin-bottom: 15px;" placeholder="password" type="password" name="password" size="30" />
-                                                <input id="user_rememberme" style="float: left; margin-right: 10px;" type="checkbox" name="user_rememberme" value="1" />
+                                                <input id="user_rememberme" style="float: left; margin-right: 10px;" type="checkbox" name="rememberme" value="1" />
                                                 <label class="string optional" for="user_rememberme"> Remember me</label>
 
                                                 <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In">
@@ -39,7 +39,7 @@
 
                     <?php } else { ?>
                     <li>
-                        <form action="/user/" method="GET" accept-charset="UTF-8">
+                        <form action="/user/" method="POST" accept-charset="UTF-8">
                         <div class="btn-group">
                            <button type="submit" class="btn btn-primary"><img src="/img/glyphicons_003_user.png" alt="E"/> <?php echo($user->first_name . ' ' . $user->last_name); ?> </button>
                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -51,6 +51,7 @@
                                 <li><a href="user/logout">Logout</a></li>
                             </ul>
                         </div>
+                        </form>
                     </li>
                     <?php } ?>
                 </ul>

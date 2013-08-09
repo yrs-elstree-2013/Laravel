@@ -13,17 +13,11 @@ class SearchController extends BaseController {
         return View::make('search')->with('isHome', false)->with('title', 'Establish.me Search')->with('results', null)->with('user', Sentry::getUser());
     }
 
-    public function postIndex( ) {
-        $query_type = Input::get('type');
+    public function postProperty( ) {
         $query_string = Input::get('query');
 
-		if(!is_string($query_type)) {
-			return Redirect::to('search');
-		}
-		
 		$returnArray = array();				// THIS IS THE ARRAY CONTAINING POSTCODES WITHIN 5KM OF $query_string
 
-		if($query_type == 'property') {
 			$pos = $this->runPython('PostCodesV5.py', $query_string);
         	$properties = Property::all();
 			$postcodes = array();
@@ -48,7 +42,12 @@ class SearchController extends BaseController {
 			}
 
             return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $properties)->with('user', Sentry::getUser());
-		}else if($query_type == 'project') {
+
+    }
+
+    public function postProject() {
+            $query_string = Input::get('query');
+
             $pos = $this->runPython('PostCodesV5.py', $query_string);
             $projects = Project::all();
             $postcodes = array();
@@ -73,9 +72,6 @@ class SearchController extends BaseController {
             }
 
             return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $projects)->with('user', Sentry::getUser());
-		}else {
-			return Redirect::to('search');
-		}
     }
 	
 	public function distance($pos, $property, $miles = false)
