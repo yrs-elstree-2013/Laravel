@@ -40,19 +40,6 @@ class SearchController extends BaseController {
 					array_push($returnArray, $pc);			// THINGS ARE ADDED TO RETURN ARRAY HERE
 				}
 			}
-<<<<<<< HEAD
-			
-			if(empty($returnArray) {
-				return "null";
-			}
-			
-            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $returnArray);
-		}else if($query_type == 'project') {
-			// TODO: Project search logic
-		}else {
-			return Redirect::to('search');
-		}
-=======
 
             return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $properties)->with('user', Sentry::getUser());
 
@@ -85,7 +72,7 @@ class SearchController extends BaseController {
             }
 
             return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $projects)->with('user', Sentry::getUser());
->>>>>>> d069e184651fae21cf6defeff3786dbccacacd1a
+
     }
 	
 	public function distance($pos, $property, $miles = false)
