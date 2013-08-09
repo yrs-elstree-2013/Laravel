@@ -11,7 +11,7 @@ class UserController extends BaseController {
 
     public function getIndex() {
         if ( Sentry::getUser() != null ) {
-            return View::make('cPanel')->with('title', 'Control Panel')->with('isHome', false)->with('user', Sentry::getUser());
+            return View::make('cPanel')->with('title', 'Control Panel')->with('isHome', false)->with('user', Sentry::getUser())->with('projects', array());
         } else {
             return View::make('signup')->with('title', 'Sign Up!')->with('isHome', false)->with('user', Sentry::getUser());
         }

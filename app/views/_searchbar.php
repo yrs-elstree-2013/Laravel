@@ -1,6 +1,5 @@
 <div class="row">
-    <div class="col-lg-2">
-    </div><!-- /.col-lg-6 -->
+    <div class="col-lg-2"></div><!-- /.col-lg-6 -->
     <div class="col-lg-8">
         <form method="post" action="/search">
             <div class="input-group" style="width:100%">
