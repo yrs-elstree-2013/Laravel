@@ -10,18 +10,19 @@
 class SearchController extends BaseController {
 
     public function getIndex() {
-        return View::make('search')->with('isHome', false)->with('title', 'Establish.me Search')->with('results', null);
+        return View::make('search')->with('isHome', false)->with('title', 'Establish.me Search')->with('results', null)->with('user', Sentry::getUser());
     }
 
     public function postIndex( ) {
         $query_type = Input::get('type');
         $query_string = Input::get('query');
+
 		if(!is_string($query_type)) {
 			return Redirect::to('search');
 		}
 		
 		$returnArray = array();				// THIS IS THE ARRAY CONTAINING POSTCODES WITHIN 5KM OF $query_string
-		
+
 		if($query_type == 'property') {
 			$pos = $this->runPython('PostCodesV5.py', $query_string);
         	$properties = Property::all();
@@ -46,9 +47,32 @@ class SearchController extends BaseController {
 				}
 			}
 
-            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $returnArray);
+            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $properties)->with('user', Sentry::getUser());
 		}else if($query_type == 'project') {
-			// TODO: Project search logic
+            $pos = $this->runPython('PostCodesV5.py', $query_string);
+            $projects = Project::all();
+            $postcodes = array();
+
+            foreach($projects as $p) {
+                $pc = $p->postcode;
+
+                if(in_array($pc, $postcodes)){
+                    continue;
+                }else {
+                    array_push($postcodes, $pc);
+                }
+            }
+
+            foreach($postcodes as $pc) {
+                $p = $this->runPython('PostCodesV5.py', $pc);
+                $dist = $this->distance($pos, $p);
+
+                if($dist < 5) {
+                    array_push($returnArray, $pc);
+                }
+            }
+
+            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $projects)->with('user', Sentry::getUser());
 		}else {
 			return Redirect::to('search');
 		}
@@ -75,7 +99,7 @@ class SearchController extends BaseController {
 		$c = 2 * atan2(sqrt($a), sqrt(1 - $a));
 		$km = $r * $c;
 
-		return ($miles ? ($km * 0.621371192) : $km);
+		return $km;
 	}
 
     public function runPython($path, $args)

@@ -17,7 +17,7 @@ class PropertyController {
 
     public function showProperty( $property_title ) {
         $project = Project::where('title', '=', $project_title);
-        return View::make('project')->with('title', $project_title)->with('isHome', false)->where('project', $project);
+        return View::make('project')->with('title', $project_title)->with('isHome', false)->where('project', $project)->with('user', Sentry::getUser());
     }
 
 

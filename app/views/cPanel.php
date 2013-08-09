@@ -6,69 +6,72 @@
     <div class="body-content" style="padding:25px;">
 
         <div class="jumbotron">
-            <?php View::make('_searchbar');?>
+            <center>
+                <h5>Search</h5>
+            </center>
+            <?php echo View::make('_searchbar');?>
             </div><!-- /.row -->
 
         </div>
 
-        <!-- Example row of columns -->
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="title">Personal Details</div>
-					<form class="form-horizontal">
-						<div class="control-group">
-							<label class="control-label" for="inputFirstName">First Name</label>
-							<div class="controls">
-								<input type="text" id="inputFirstName" value="Name">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputLastName">Last Name</label>
-								<div class="controls">
-									<input type="text" id="inputFirstName" value="Surname">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputEmail">Email</label>
-							<div class="controls">
-								<input type="text" id="inputEmail" value="Email">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputCompanyName">Company Name</label>
-							<div class="controls">
-								<input type="text" id="inputCompanyName" value="Company Name">
-							</div>
-						</div>
-						<div class="control-group">
-						<label class="control-label" for="inputCompanyName">Company type</label>
-							<div class="controls">
-								<input type="text" id="inputCompanyName" value="Type">
-							</div>
-						</div>
-					</form>
-                <p><a class="btn btn-default" href="http://establish.dev/info/about">Save settings</a></p>
-            </div>
-			
-            <div class="col-lg-6">
-                <div class="title">Created Projects</div>
-					<ol>
-						<li style="list-style-type: none; float:left; padding:0;">
-							<a href="#link"><h5 style="padding:0; margin:0; font-size:16pt;">Project Name</h5></a>
-								<p style="padding:0; margin:0;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget nunc massa. Proin ultricies tellus elementum tellus suscipit, eget aliquam erat vehicula. Maecenas scelerisque risus nisl, ut eleifend diam egestas ut. Aenean vel elit mattis, laoreet mauris non, lacinia diam.
-								</p>
-						</li>
-						<li style="list-style-type: none; float:left; padding:0;">
-							<a href="#link"><h5 style="padding:0; margin:0; font-size:16pt;">Project Name</h5></a>
-								<p style="padding:0; margin:0;">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget nunc massa. Proin ultricies tellus elementum tellus suscipit, eget aliquam erat vehicula. Maecenas scelerisque risus nisl, ut eleifend diam egestas ut. Aenean vel elit mattis, laoreet mauris non, lacinia diam.
-								</p>
-						</li>
-					</ol>
-                <p><a class="btn btn-default" href="http://establish.dev/info/about">Save settings</a></p>
-            </div>
-				
-			</div>
+    <div class="row">
+        <div class="col-lg-1" ></div>
+        <div class="col-lg-5 panel" style="margin-right: 5px;">
+
+            <form action="/user/signup" method="post" accept-charset="UTF-8">
+                <fieldset style='border: none;'>
+                    <center><legend>Sign Up!</legend></center>
+                    <div class="form-group">
+                        <label for="username">Email Address:</label>
+                        <input type="text" class="form-control" id="username" placeholder="email@address.com" name="username"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="password" name="password"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="first_name">First Name:</label>
+                        <input type="text" class="form-control" id="first_name" placeholder="John" name="first_name"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" class="form-control" id="last_name" placeholder="Doe" name="last_name"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-default pull-right" style="width:40%">Sign Up</button>
+                </fieldset>
+
+            </form>
+
+
+        </div>
+
+        <div class="col-lg-5 panel" style="margin-left: 5px;">
+
+            <form action="/user/login" method="post" accept-charset="UTF-8">
+                <fieldset style='border: none;'>
+                    <center><legend>Existing User?</legend></center>
+                    <div class="form-group">
+                        <label for="username">Email Address:</label>
+                        <input type="text" class="form-control" placeholder="email@address.com" name="username"/>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="password" name="password"/>
+                    </div>
+                    <input id="user_rememberme" style="float: left; margin-right: 10px;" type="checkbox" name="rememberme" value="1" />
+                    <label class="string optional" for="user_rememberme"> Remember me</label>
+                    <button type="submit" class="btn btn-default pull-right" style="width:40%">Log In</button>
+
+                </fieldset>
+            </form>
+
+        </div>
+        <div class="col-lg-1" ></div>
+    </div>
     </div><!-- /.body-content -->
     <?php include(app_path().'/includes/_footer.php') ?>

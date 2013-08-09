@@ -17,7 +17,7 @@ class ProjectController extends BaseController {
 
     public function showProject( $project_title ) {
         $project = Project::where('title', '=', $project_title);
-        return View::make('project')->with('title', $project_title)->with('isHome', false)->with('project', $project);
+        return View::make('project')->with('title', $project_title)->with('isHome', false)->with('project', $project)->with('user', Sentry::getUser());
     }
 
 

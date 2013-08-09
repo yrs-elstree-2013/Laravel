@@ -16,6 +16,7 @@ Route::get('project/{project_title}', 'ProjectController@showProject');
 Route::get('project', 'ProjectController');
 Route::controller('info', 'InformationController');
 Route::controller('search', 'SearchController');
+Route::controller('user', 'UserController');
 
 Route::group(array('domain' => '{project_title}.establish.dev'), function()
 {
