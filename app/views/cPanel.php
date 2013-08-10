@@ -51,7 +51,7 @@
 
                             <tr>
                                 <td>
-                                    <a href="/project/create"><button class="btn btn-primary pull-right" style="clear: left; width: 100%; height: 32px; font-size: 13px;margin-top: 5px;">Create a Project!</button></a>
+                                    <a href="/search/"><button class="btn btn-primary pull-right" style="clear: left; width: 100%; height: 32px; font-size: 13px;margin-top: 5px;">Find a Property to get Started!</button></a>
                                 </td>
                             </tr>
                     </table>

@@ -36,15 +36,6 @@
 
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:left;">My Fantastic Photography Shop </h3>
-                    </div>
-                    <div>
-                        You should definitely fund this incredible project!
-                    </div>
-                </div>
-
-                <div class="panel">
-                    <div class="panel-heading">
                         <h3 class="panel-title" style="text-align:left;">Existing businesses in the area</h3>
                     </div>
                     <div>
@@ -57,40 +48,21 @@
             <div class="col-lg-3">
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:center;">Curent Funding</h3>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" style="width: 60%"></div>
+                        <h3 class="panel-title" style="text-align:center;">Existing Projects</h3>
                     </div>
                     <div style="text-align:center;">
-                        £60 of £300
+                        No Existing Projects
                     </div>
 
                 </div>
 
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:center;">Donations</h3>
-                    </div>
-                    <div style="text-align:center;">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="£10">
-                          <span class="input-group-btn">
-                            <button class="btn" style="background-color: rgb(0, 150, 230);"type="button"><img src="/img/glyphicons_458_money.png" /></button>
-                          </span>
-                        </div><!-- /input-group -->
-                    </div>
-
-                </div>
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:center;">Social Media</h3>
+                        <h3 class="panel-title" style="text-align:center;">Rent Details</h3>
                     </div>
                     <div style="margin-left:auto;margin-right:auto;">
-                        <a href="http://www.facebook.com" target="_blank"><img src="/img/img1.png" onmouseover="this.src='/img/img1b.png'" onmouseout="this.src='/img/img1.png'" alt="Facebook" width="100" height="100"></a>
-                        <a href="http://www.googlemail.com" target="_blank"><img src="/img/img2.png" onmouseover="this.src='/img/img2b.png'" onmouseout="this.src='/img/img2.png'" alt="Email" width="100" height="100"></a>
-                        <a href="https://plus.google.com" target="_blank"><img src="/img/img3.png" onmouseover="this.src='/img/img3b.png'" onmouseout="this.src='/img/img3.png'" alt="Google+" width="100" height="100"></a>
-                        <a href="https://twitter.com/" target="_blank"><img src="/img/img5.png" onmouseover="this.src='/img/img5b.png'" onmouseout="this.src='/img/img5.png'" alt="twitter" width="100" height="100"></a>
+                        <strong>Rent:</strong> <br> £ 1000 / month <br> <br>
+                        <strong>Owner:</strong> <br> Exeter Council <br>
                     </div>
                 </div>
                 <div class="panel">
@@ -109,8 +81,8 @@
                     <div class="panel-heading">
                         <h3 class="panel-title" style="text-align:left;"> Establish.me Ratings:</h3>
                     </div>
-                    <div style="margin-left:25%;margin-right:25%;">
-
+                    <div>
+                        <div style="width:100%;"><strong>Crime Rating: </strong> 1</div>
                     </div>
                 </div>
             </div>
