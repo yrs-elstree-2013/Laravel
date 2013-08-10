@@ -16,7 +16,7 @@ class PropertyController extends BaseController{
     }
 
     public function showProperty( $id ) {
-        $property = Property::find(1);
+        $property = Property::find($id);
 
         return View::make('property')->with('title', $property->postcode)->with('isHome', false)->with('property', $property)->with('user', Sentry::getUser());
     }

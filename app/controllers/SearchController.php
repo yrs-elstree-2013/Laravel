@@ -10,7 +10,7 @@
 class SearchController extends BaseController {
 
     public function getIndex() {
-        return View::make('search')->with('isHome', false)->with('title', 'Establish.me Search')->with('results', null)->with('user', Sentry::getUser());
+        return View::make('search')->with('isHome', false)->with('title', 'Establish.me Search')->with('results', null)->with('user', Sentry::getUser())->with('type', null);
     }
 
     public function postProperty( ) {
@@ -30,7 +30,7 @@ class SearchController extends BaseController {
                 }
 			}
 
-            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $returnArray)->with('user', Sentry::getUser());
+            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $returnArray)->with('user', Sentry::getUser())->with('type', 'property');
 
     }
 
