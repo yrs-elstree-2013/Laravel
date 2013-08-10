@@ -1,8 +1,8 @@
 <?php 
-// OutputCrimeRating("HA8 0FG"); echo "<br />"; 
-// OutputCrimeRating("N14 5AF"); echo "<br />"; 
-// OutputCrimeRating("WD17 3AN"); echo "<br />";
-// OutputCrimeRating("NW7 4HN"); echo "<br />"; 
+OutputCrimeRating("EX1 1HD"); echo "<br />"; 
+OutputCrimeRating("EX4 7BD"); echo "<br />"; 
+OutputCrimeRating("EX1 2BU"); echo "<br />";
+OutputCrimeRating("EX4 3AN"); echo "<br />"; 
 // OutputCrimeRating("WD6 1HL"); echo "<br />";
 
 function runPython($path, $args) {
@@ -45,24 +45,24 @@ function OutputCrimeRating($CurrentPostCode){
 	while($row = mysqli_fetch_array($result)){
 		$long = $row['Longitude'];
 		$lat = $row['Latitude']; 
-		if(getDistance($lat, $long, $CurrentLat, $CurrentLong, false) <= 15){
+		if(getDistance($lat, $long, $CurrentLat, $CurrentLong, false) <= 14){
 			if ($row['Crime type'] != "Other crime"){
 				$amount++;
 			}
 		}
 	}
-	if($amount <= 25) {
+	if($amount <= 50) {
 		echo "&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;"; 
-	} else if($amount <= 200 ){
+	} else if($amount <= 250 ){
 		echo "&#x2605;&#x2605;&#x2605;&#x2605;";
-	} else if($amount <= 500 ){
+	} else if($amount <= 1300 ){
 		echo "&#x2605;&#x2605;&#x2605;";
-	} else if($amount <= 1000 ){
+	} else if($amount <= 1500 ){
 		echo "&#x2605;&#x2605;";
 	} else{
 		echo "&#x2605;";
 	} 
-	// echo $amount . " " . $CurrentPostCode;
+	 echo $amount . " " . $CurrentPostCode;
 
 
 	mysqli_close($con);
