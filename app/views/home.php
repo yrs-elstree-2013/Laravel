@@ -6,19 +6,18 @@
         function initialize()
         {
             var mapProp = {
-                center:new google.maps.LatLng(51.508742,-0.120850),
+                center:new google.maps.LatLng(50.7289,-3.5333),
                 zoom:12,
                 mapTypeId:google.maps.MapTypeId.ROADMAP
             };
             var map=new google.maps.Map(document.getElementById("googleMap")
                 ,mapProp);
 
-            });
 
             <?php
-			$properties = array(					/* ATTENTION */
-				array('name'=>'1 Shepherds Road',   /* $properties needs to be the array containing the properties */
-				'lat'=>51.508742,							/* <----- Use that format there */
+			$properties = array(
+				array('name'=>'1 Shepherds Road',
+				'lat'=>51.508742,
 				'lng'=>-0.120850),
 				array('name'=>'2 Shepherds Road',
 				'lat'=>51.508742,

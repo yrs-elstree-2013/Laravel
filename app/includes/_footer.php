@@ -1,6 +1,6 @@
 <br />
 <div class="container">
-    <div class="col-lg-12 navbar navbar-static hidden-sm" style="bottom:0;">
+    <div class="col-lg-12 navbar navbar-static visible-lg" style="bottom:0;">
         <div class="nav-collapse collapse" style="width:400px;margin: 0 auto;">
             <div>
                 <ul class="nav navbar-nav text-center" style="">

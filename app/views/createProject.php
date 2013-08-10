@@ -8,7 +8,7 @@
 <div class="body-content">
 
 
-        <form action="/user/login" method="post" accept-charset="UTF-8">
+        <form action="/project/create" method="post" accept-charset="UTF-8">
             <div class="row col-12">
                 <div class="col-1 hidden-sm"></div>
                 <div class="panel col-lg-10">
@@ -27,23 +27,42 @@
                                 <abbr style="font-size: 12px;" title="A slogan or subtitle for your project">What is this?</abbr>
                                 <br><br>
                                 <label for="slogan">Weblink:</label>
-                                <input type="text" class="form-control" placeholder="johnsshop" name="slogan"/>
+                                <input type="text" class="form-control" placeholder="johnsshop" name="weblink"/>
                                 <abbr style="font-size: 12px;" title="This will become the domain name for your project. For example johnsshop would become johnsshop.establish.me">What is this?</abbr>
 
                             </div>
                             <div class="col-1 hidden-sm"></div>
                             <div class="col-lg-5">
                                 <label for="target">Primary Target:</label>
-                                <input type="number" class="form-control" placeholder="3000" name="target" disabled/>
+                                <input type="number" class="form-control" placeholder="1000" name="target" />
                                 <abbr style="font-size: 12px;" title="This is the amount of funding you will need to rent the selected property. Additional funding can be added below">What is this?</abbr>
-                                <br><br>
-                                <label for="target">Costs Target:</label>
-                                <input type="number" class="form-control" placeholder="0.00" name="target"/>
-                                <abbr style="font-size: 12px;" title="This is a secondary funding target for associated setup costs. This will be clearly displayed as seperate to users.">What is this?</abbr>
                                 <br><br>
                                 <label for="private_funding">Your Contribution:</label>
                                 <input type="number" class="form-control" placeholder="0.00" name="private_funding"/>
                                 <abbr style="font-size: 12px;" title="The amount of money you are putting towards the project. There is a limit of 49% of the total funding target.">What is this?</abbr>
+                            </div>
+
+
+
+                        </div>
+
+                    </fieldset>
+                </div>
+                <div class="col-1 hidden-sm"></div>
+            </div>
+
+            <div class="row col-12">
+                <div class="col-1 hidden-sm"></div>
+                <div class="panel col-lg-10">
+                    <fieldset style='border: none;'>
+                        <legend>Description</legend>
+
+                        <div class="row">
+
+                            <div class="col-lg-12">
+                                <textarea class="form-control" placeholder="What your shop does" name="description"></textarea>
+                                <abbr style="font-size: 12px;" title="Your description of your project.">What is this?</abbr>
+
                             </div>
 
 
@@ -75,7 +94,7 @@
 
                             <div class="col-lg-4">
                                 <label for="target">Establish.me Ratings:</label> <br>
-                                <strong style="font-size: 13px;">Crime : </strong> 4 <br>
+                                <strong style="font-size: 13px;">Crime : </strong> <?php CrimeFunctions::OutputCrimeRating($property->postcode) ?><br>
 
                             </div>
 

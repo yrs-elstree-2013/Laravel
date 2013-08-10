@@ -6,7 +6,7 @@
         function initialize()
         {
             var mapProp = {
-                center:new google.maps.LatLng(51.508742,-0.120850),
+                center:new google.maps.LatLng(50.7289,-3.5333),
                 zoom:12,
                 mapTypeId:google.maps.MapTypeId.ROADMAP
             };
@@ -34,7 +34,7 @@
         </div>
 
         <div class="row col-lg-12">
-            <div class="col-lg-8"><h5>A short catchphrase for the particular venture</h5></div>
+            <div class="col-lg-8"><h5><?php echo($project->slogan); ?></h5></div>
 
         </div>
 
@@ -48,19 +48,10 @@
 
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:left;">My Fantastic Photography Shop </h3>
+                        <h3 class="panel-title" style="text-align:left;"><?=$project->title?> </h3>
                     </div>
                     <div>
-                        You should definitely fund this incredible project!
-                    </div>
-                </div>
-
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:left;">Existing businesses in the area</h3>
-                    </div>
-                    <div>
-                        Yelp goes here
+                        <?=$project->description ?>
                     </div>
                 </div>
 
@@ -71,11 +62,13 @@
                     <div class="panel-heading">
                         <h3 class="panel-title" style="text-align:center;">Curent Funding</h3>
                     </div>
+
                     <div class="progress">
-                        <div class="progress-bar progress-bar-info" style="width: 60%"></div>
+
+                        <div class="progress-bar progress-bar-info" style="width: <?php  echo(($project->progress / $project->target) * 100); ?>%"></div>
                     </div>
                     <div style="text-align:center;">
-                        £60 of £300
+                        £<?=$project->progress?> of £<?=$project->target?>
                     </div>
 
                 </div>
@@ -122,7 +115,7 @@
                         <h3 class="panel-title" style="text-align:left;"> Establish.me Ratings:</h3>
                     </div>
                     <div style="margin-left:25%;margin-right:25%;">
-
+                        <strong style="font-size: 13px;">Crime : </strong> <?php CrimeFunctions::OutputCrimeRating($project->postcode) ?><br>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,12 @@
                     if($results != null) {
                         foreach($results as $property) {
 
-                            echo View::make('_result')->with('result_title', $property->postcode)->with('result_body', '<address><strong>' . $property->address . '</strong><br>' . $property->second_address . '<br><br>' . $property->postcode . '</address>' )->with('result_link', URL::to('property/show/'.$property->id));
+                            echo View::make('_result')
+                                ->with('result_title', $property->postcode)
+                                ->with('result_body', '<address><strong>' . $property->address . '</strong><br>' . $property->second_address . '<br><br>' . $property->postcode . '</address>' )
+                                ->with('result_link', URL::to('property/show/'.$property->id))
+                                ->with('img_adr', '/building_img/' . $property->id . '.jpg')
+                                ->with('property', $property);
 
                         }
                     } else {

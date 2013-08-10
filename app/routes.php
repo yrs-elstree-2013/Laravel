@@ -13,7 +13,6 @@
 
 Route::get('project/show/{id}', 'ProjectController@showProject');
 Route::get('property/show/{id}', 'PropertyController@showProperty');
-Route::get('project/create/{id}', 'ProjectController@getCreate');
 Route::controller('project', 'ProjectController');
 Route::controller('property', 'PropertyController');
 Route::controller('info', 'InformationController');
@@ -25,7 +24,8 @@ Route::group(array('domain' => '{project_title}.establish.dev'), function()
 
     Route::get('/', function($project_title)
     {
-        return Redirect::action('ProjectController@showProject', $project_title);
+        $project = Project::where('weblink', '=', $project_title)->first();
+        return Redirect::action('ProjectController@showProject', $project->id);
     });
 
 });

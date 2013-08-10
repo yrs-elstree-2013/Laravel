@@ -1,3 +1,4 @@
+<?php include(app_path() . '/includes/CrimeFunctions.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

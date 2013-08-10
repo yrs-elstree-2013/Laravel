@@ -51,9 +51,9 @@ class ProjectController extends BaseController {
 
     public function showProject( $project_title ) {
         return View::make('project')
-            ->with('title', 'Project')
+            ->with('title', Project::find($project_title)->title)
             ->with('isHome', false)
-            ->with('project', Project::find(1))
+            ->with('project', Project::find($project_title))
             ->with('user', Sentry::getUser());
 
     }
@@ -68,12 +68,10 @@ class ProjectController extends BaseController {
         $new_project->target = Input::get('target');
         $new_project->progress = Input::get('private_funding');
         $new_project->ownerid = Sentry::getUser()->id;
-        $new_project->website = Input::get('website');
-        $new_project->legalname = Input::get('trading_name');
 
         $new_project->save();
 
-        return Redirect::to('project/show/?name="' . $new_project->weblink . '"' );
+        return Redirect::to('project/show/' . $new_project->id );
     }
 
 }
