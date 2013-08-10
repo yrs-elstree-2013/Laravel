@@ -12,11 +12,21 @@
             };
             var map=new google.maps.Map(document.getElementById("googleMap")
                 ,mapProp);
+
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(51.508742,-0.120850),
+                map: map,
+                title: 'Hello World!'
+            });
+
         }
 
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
+<style>
+    .panel{margin-bottom:0px;}
+</style>
 
 </head>
 

@@ -3,16 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="/favicon.ico" />
 
     <title><?php echo $title ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/bootstrap-switch.css">
-	
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
-  <link rel="stylesheet" href="./examples/assets/prism.css">
-  <link rel="stylesheet" href="./examples/assets/styles.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!--<link rel="stylesheet" href="./js/pure-min.css">-->
+    <link rel="stylesheet" href="/css/liquid-slider.css">
 
  <script type="text/javascript">
      $(function() {

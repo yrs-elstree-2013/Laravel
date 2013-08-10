@@ -5,7 +5,11 @@
         function initialize()
         {
             var mapProp = {
-                center:new google.maps.LatLng(51.508742,-0.120850),
+                center:new google.maps.LatLng(<?php
+                $result = exec(app_path().'python/PostCodesV5.py ' . $property->postcode);
+                $json = json_decode($result);
+                echo($json['lat'] . ' ' . $json['long']);
+                ?> ),
                 zoom:12,
                 mapTypeId:google.maps.MapTypeId.ROADMAP
             };
@@ -23,21 +27,6 @@
 
     <div class="body-content">
 
-        <!-- Example row of columns -->
-        <div class="row col-lg-12">
-            <h2><?php echo $title ?></h2>
-        </div>
-
-
-        <div class="row col-lg-12" style="background-color:rgb(0, 150, 230);height:2px;width:70%;margin-left:5px;">
-        </div>
-
-        <div class="row col-lg-12">
-            <div class="col-lg-8"><h5>A short catchphrase for the particular venture</h5></div>
-
-        </div>
-
-        <!-- Body Text -->
         <div class="row col-lg-12">
             <div class="col-lg-9">
                 <!-- Left hand coloumn -->
@@ -50,62 +39,68 @@
                         <h3 class="panel-title" style="text-align:left;">My Fantastic Photography Shop </h3>
                     </div>
                     <div>
-                        You should definitely purchase this property!
+                        You should definitely fund this incredible project!
                     </div>
                 </div>
 
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:left;">Existing properties in the area</h3>
+                        <h3 class="panel-title" style="text-align:left;">Existing businesses in the area</h3>
                     </div>
                     <div>
                         Yelp goes here
                     </div>
                 </div>
+
             </div>
 
             <div class="col-lg-3">
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:center;">Bids</h3>
+                        <h3 class="panel-title" style="text-align:center;">Curent Funding</h3>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" style="width: 60%"></div>
                     </div>
                     <div style="text-align:center;">
-                        £70,000
+                        £60 of £300
                     </div>
+
                 </div>
 
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:center;">Place a offer</h3>
+                        <h3 class="panel-title" style="text-align:center;">Donations</h3>
                     </div>
                     <div style="text-align:center;">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="£67,775">
+                            <input type="text" class="form-control" placeholder="£10">
                           <span class="input-group-btn">
                             <button class="btn" style="background-color: rgb(0, 150, 230);"type="button"><img src="/img/glyphicons_458_money.png" /></button>
                           </span>
                         </div><!-- /input-group -->
                     </div>
+
                 </div>
-				
                 <div class="panel">
-                    <h3 class="panel-title" style="text-align:center;">Google Maps</h3>
                     <div class="panel-heading">
+                        <h3 class="panel-title" style="text-align:center;">Social Media</h3>
+                    </div>
+                    <div style="margin-left:auto;margin-right:auto;">
+                        <a href="http://www.facebook.com" target="_blank"><img src="/img/img1.png" onmouseover="this.src='/img/img1b.png'" onmouseout="this.src='/img/img1.png'" alt="Facebook" width="100" height="100"></a>
+                        <a href="http://www.googlemail.com" target="_blank"><img src="/img/img2.png" onmouseover="this.src='/img/img2b.png'" onmouseout="this.src='/img/img2.png'" alt="Email" width="100" height="100"></a>
+                        <a href="https://plus.google.com" target="_blank"><img src="/img/img3.png" onmouseover="this.src='/img/img3b.png'" onmouseout="this.src='/img/img3.png'" alt="Google+" width="100" height="100"></a>
+                        <a href="https://twitter.com/" target="_blank"><img src="/img/img5.png" onmouseover="this.src='/img/img5b.png'" onmouseout="this.src='/img/img5.png'" alt="twitter" width="100" height="100"></a>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="text-align:center;">Google Maps</h3>
                     </div>
                     <div>
                         <div id="googleMap" style="width:100%;height:200px;"></div>
                     </div>
-                </div>
-                <div class="panel">
-                    <h3 class="panel-title" style="text-align:center;">Projects</h3>
-                    <div class="panel-heading">
-                    </div>
-                    <div>
-						<table class="table table-hover">
-							<tr><td>Project Name</td><td>Project category</td></tr>
-							<tr><td>Project x</td><td>No category</td></tr>
-						</table>
-                    </div>
+
                 </div>
             </div>
 
@@ -120,6 +115,8 @@
                 </div>
             </div>
         </div>
+
+    </div>
 
 
 <?php include(app_path().'/includes/_footer.php') ?>

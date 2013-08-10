@@ -41,14 +41,14 @@
                     <li>
                         <form action="/user/" method="POST" accept-charset="UTF-8">
                         <div class="btn-group">
-                           <button type="submit" class="btn btn-primary"><img src="/img/glyphicons_003_user.png" alt="E"/> <?php echo($user->first_name . ' ' . $user->last_name); ?> </button>
+                           <button type="submit" class="btn btn-primary"><img style="max-height:17px;" src="/img/glyphicons_003_user.png" alt="E"/> <?php echo($user->first_name . ' ' . $user->last_name); ?> </button>
                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="user/">Control Panel</a></li>
+                                <li><a href="/user/">Control Panel</a></li>
                                 <li class="divider"></li>
-                                <li><a href="user/logout">Logout</a></li>
+                                <li><a href="/user/logout">Logout</a></li>
                             </ul>
                         </div>
                         </form>

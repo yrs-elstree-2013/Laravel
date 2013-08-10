@@ -12,26 +12,30 @@
 
         <!-- Example row of columns -->
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5 panel" style="margin-right:10px;">
                 <div class="title">Personal Details</div>
                 <div>
 					<form class="form-horizontal">
 						<div class="control-group">
-							<label class="control-label">First Name</label>
+							<label class="control-label" style="width:150px;text-align:left;">First Name:</label>
+                            <label class="control-label" style="font-weight:normal;font-size:15px;"><?php echo($user->first_name);?></label>
 						</div>
 						<div class="control-group">
-							<label class="control-label">Last Name</label>
+							<label class="control-label" style="width:150px;text-align:left;">Last Name:</label>
+                            <label class="control-label" style="font-weight:normal;font-size:15px;"><?php echo($user->last_name);?></label>
 						</div>
 						<div class="control-group">
-							<label class="control-label">Email</label>
+							<label class="control-label" style="width:150px;text-align:left;">Email Address:</label>
+                            <label class="control-label" style="font-weight:normal;font-size:15px;"><?php echo($user->email);?></label>
 						</div>
 					</form>
                 </div>
             </div>
 			
-            <div class="col-lg-6">
+            <div class="col-lg-5 panel">
                 <div class="title">Projects</div>
-                    <table class="table table-hover">
+                    <table class="table">
                             <?php foreach($projects as $p) { echo("
                             <tr>
                                 <td>
@@ -52,6 +56,7 @@
                             </tr>
                     </table>
             </div>
+            <div class="col-lg-1"></div>
 				
 	    </div>
     </div><!-- /.body-content -->

@@ -1,17 +1,17 @@
 <br />
 <div class="container">
-    <div class="col-lg-12 navbar navbar-static" style="bottom:0;">
-        <a class="col-lg-4" href="#"><br /></a>
-        <div class="nav-collapse collapse col-lg-5">
-            <ul class="nav navbar-nav text-center" style=" width:100%; ">
+    <div class="col-lg-12 navbar navbar-static hidden-sm" style="bottom:0;">
+        <div class="nav-collapse collapse" style="width:400px;margin: 0 auto;">
+            <div>
+                <ul class="nav navbar-nav text-center" style="">
 
-                <li style="border-right:1px solid #000; margin:5px 0 5px 0; padding:0;" <?php if ($title == 'Terms & Conditions') { echo('class="active"'); } ?>><a href="http://establish.dev/info/tos">Terms &amp; Services</a></li>
-                <li style="border-right:1px solid #000; margin:5px 0 5px 0;" <?php if ($title == 'Privacy') { echo('class="active"'); } ?>><a href="http://establish.dev/info/privacypolicy">Privacy</a></li>
-                <li style="margin:5px 0 5px 0;" <?php if ($title == 'About Us') { echo('class="active"'); } ?>><a href="http://establish.dev/info/about">About Us</a></li>
+                    <li style="border-right:1px solid #000; margin:5px 0 5px 0; padding:0;" <?php if ($title == 'Terms & Conditions') { echo('class="active"'); } ?>><a href="http://establish.dev/info/tos">Terms &amp; Services</a></li>
+                    <li style="border-right:1px solid #000; margin:5px 0 5px 0;" <?php if ($title == 'Privacy') { echo('class="active"'); } ?>><a href="http://establish.dev/info/privacypolicy">Privacy</a></li>
+                    <li style="margin:5px 0 5px 0;" <?php if ($title == 'About Us') { echo('class="active"'); } ?>><a href="http://establish.dev/info/about">About Us</a></li>
 
-            </ul>
+                </ul>
+            </div>
         </div><!--/.nav-collapse -->
-        <a class="col-lg-3`" href="#"><br /></a>
     </div>
 </div>
 </div> <!-- /container -->
