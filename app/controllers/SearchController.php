@@ -10,38 +10,27 @@
 class SearchController extends BaseController {
 
     public function getIndex() {
-        return View::make('search')->with('isHome', false)->with('title', 'Establish.me Search')->with('results', null)->with('user', Sentry::getUser());
+        return View::make('search')->with('isHome', false)->with('title', 'Establish.me Search')->with('results', null)->with('user', Sentry::getUser())->with('type', null);
     }
 
     public function postProperty( ) {
         $query_string = Input::get('query');
-
 		$returnArray = array();				// THIS IS THE ARRAY CONTAINING POSTCODES WITHIN 5KM OF $query_string
 
 			$pos = $this->runPython('PostCodesV5.py', $query_string);
         	$properties = Property::all();
-			$postcodes = array();
 			
 			foreach($properties as $p) { // Go through each property
 				$pc = $p->postcode;
-				
-				if(in_array($pc, $postcodes)){ // If postcode already in array
-					continue;
-				}else {
-					array_push($postcodes, $pc);	// Add the postcode to the array if it isn't already there
-				}
-			}
-			
-			foreach($postcodes as $pc) {	// Go through postcodes
-				$p = $this->runPython('PostCodesV5.py', $pc);	// Get the lat/long of the postcode
-				$dist = $this->distance($pos, $p);		// Get their distance from query postcode
-				
-				if($dist < 5) {
-					array_push($returnArray, $pc);			// THINGS ARE ADDED TO RETURN ARRAY HERE
-				}
+                $location = $this->runPython('PostCodesV5.py', $pc);	// Get the lat/long of the postcode
+                $dist = $this->distance($pos, $location);		// Get their distance from query postcode
+
+                if($dist < 5) {
+                    array_push($returnArray, $p);			// THINGS ARE ADDED TO RETURN ARRAY HERE
+                }
 			}
 
-            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $properties)->with('user', Sentry::getUser());
+            return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $returnArray)->with('user', Sentry::getUser())->with('type', 'property');
 
     }
 
@@ -65,14 +54,12 @@ class SearchController extends BaseController {
             foreach($postcodes as $pc) {
                 $p = $this->runPython('PostCodesV5.py', $pc);
                 $dist = $this->distance($pos, $p);
-
                 if($dist < 5) {
                     array_push($returnArray, $pc);
                 }
             }
 
             return View::make('search')->with('title', 'Search Results')->with('isHome', false)->with('results', $projects)->with('user', Sentry::getUser());
-
     }
 	
 	public function distance($pos, $property, $miles = false)
@@ -101,9 +88,14 @@ class SearchController extends BaseController {
 
     public function runPython($path, $args)
     {
-        $result = exec(app_path().'python/'.$path.' '.$args);
-        return json_decode($result);
+        $result = exec('python ' . app_path().'/controllers/python/'.$path.' '.$args);
+        return json_decode($result, true);
         //return $result;
+    }
+
+    public function missingMethod($parameters)
+    {
+        return Redirect::to('search');
     }
 
 }

@@ -15,12 +15,65 @@ class ProjectController extends BaseController {
 
     }
 
+    public function getShow( ) {
+        $project_name = Input::get('name');
+        $project = Project::where('weblink', '=', $project_name);
+        return View::make('project')
+            ->with('title', $project->title)
+            ->with('isHome', false)
+            ->with('project', $project)
+            ->with('user', Sentry::getUser());
+    }
+
+    public function getCreate() {
+
+        if ( Sentry::check() ) {
+            $projects = Project::where('ownerid', "=", Sentry::getUser()->id);
+            if ( empty( $projects ) ) {
+
+                //return View::make('errorpage'); // Sorry only one project per account at this point
+                return 'Only one per account';
+
+            } else {
+
+                return View::make('createProject')
+                    ->with('title', 'Create Project')
+                    ->with('isHome', false)
+                    ->with('user', Sentry::getUser());
+
+            }
+        } else {
+            return Redirect::to('user/signup');
+        }
+
+
+    }
+
     public function showProject( $project_title ) {
-        $project = Project::where('title', '=', $project_title);
-        return View::make('project')->with('title', $project_title)->with('isHome', false)->with('project', $project)->with('user', Sentry::getUser());
+        return View::make('project')
+            ->with('title', 'Project')
+            ->with('isHome', false)
+            ->with('project', Project::find(1))
+            ->with('user', Sentry::getUser());
+
     }
 
 
+    public function postCreate() {
+        $new_project = new Project();
+        $new_project->weblink = Input::get('weblink');
+        $new_project->title = Input::get('title');
+        $new_project->slogan = Input::get('slogan');
+        $new_project->description = Input::get('description');
+        $new_project->target = Input::get('target');
+        $new_project->progress = Input::get('private_funding');
+        $new_project->ownerid = Sentry::getUser()->id;
+        $new_project->website = Input::get('website');
+        $new_project->legalname = Input::get('trading_name');
 
+        $new_project->save();
+
+        return Redirect::to('project/show/?name="' . $new_project->weblink . '"' );
+    }
 
 }

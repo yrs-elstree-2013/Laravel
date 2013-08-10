@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-class PropertyController {
+class PropertyController extends BaseController{
 
     public function getIndex() {
 
@@ -15,10 +15,12 @@ class PropertyController {
 
     }
 
-    public function showProperty( $property_title ) {
-        $project = Project::where('title', '=', $project_title);
-        return View::make('project')->with('title', $project_title)->with('isHome', false)->where('project', $project)->with('user', Sentry::getUser());
+    public function showProperty( $id ) {
+        $property = Property::find($id);
+
+        return View::make('property')->with('title', $property->postcode)->with('isHome', false)->with('property', $property)->with('user', Sentry::getUser());
     }
+
 
 
 

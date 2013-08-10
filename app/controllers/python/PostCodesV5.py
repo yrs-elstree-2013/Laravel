@@ -36,4 +36,6 @@ def PostcodeInfo(Postcode):
 
 
 Postcode = sys.argv[1]
+if ( sys.argv[2] != None ) :
+    Postcode += sys.argv[2]
 print PostcodeInfo(Postcode)

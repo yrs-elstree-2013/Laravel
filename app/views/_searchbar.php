@@ -7,8 +7,8 @@
             </div><!-- /input-group -->
             <div>
                 <center>
-                    <button class="btn" type="submit" formaction="/search/project" style="background-color:transparent;"><label style="padding-right: 5px;">Find Projects</label><img src="/img/glyphicons_242_google_maps.png" /></button>
-                    <button class="btn" type="submit" formaction="/search/property" style="background-color:transparent;"><img src="/img/glyphicons_242_google_maps.png" /><label style="padding-left: 5px;">Find Properties</label></button>
+                    <button class="btn btn-primary" type="submit" formaction="/search/project" style="width:175px;background-color:rgb(0, 150, 230);"><label style="padding-right: 5px;">Find Projects</label><img src="/img/glyphicons_242_google_maps.png" /></button>
+                    <button class="btn btn-primary" type="submit" formaction="/search/property" style="width:175px;background-color:rgb(0, 150, 230);"><img src="/img/glyphicons_242_google_maps.png" /><label style="padding-left: 5px;">Find Properties</label></button>
                 </center>
             </div>
         </form>

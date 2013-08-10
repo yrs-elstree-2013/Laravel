@@ -99,10 +99,10 @@
                         <h3 class="panel-title" style="text-align:center;">Social Media</h3>
                     </div>
                     <div style="margin-left:auto;margin-right:auto;">
-                        <a href="http://www.facebook.com" target="_blank"><img src="/img/img1.png" onmouseover="this.src='/img/img1b.png'" onmouseout="this.src='/img/img1.png'" alt="Facebook" width="100" height="100"></a>
-                        <a href="http://www.googlemail.com" target="_blank"><img src="/img/img2.png" onmouseover="this.src='/img/img2b.png'" onmouseout="this.src='/img/img2.png'" alt="Email" width="100" height="100"></a>
-                        <a href="https://plus.google.com" target="_blank"><img src="/img/img3.png" onmouseover="this.src='/img/img3b.png'" onmouseout="this.src='/img/img3.png'" alt="Google+" width="100" height="100"></a>
-                        <a href="https://twitter.com/" target="_blank"><img src="/img/img5.png" onmouseover="this.src='/img/img5b.png'" onmouseout="this.src='/img/img5.png'" alt="twitter" width="100" height="100"></a>
+                        <a href="http://www.facebook.com" target="_blank"><img src="/img/img1.png" style="max-width:75px;max-height: 75px;" onmouseover="this.src='/img/img1b.png'" onmouseout="this.src='/img/img1.png'" alt="Facebook" width="100" height="100"></a>
+                        <a href="http://www.googlemail.com" target="_blank"><img src="/img/img2.png" style="max-width:75px;max-height: 75px;" onmouseover="this.src='/img/img2b.png'" onmouseout="this.src='/img/img2.png'" alt="Email" width="100" height="100"></a>
+                        <a href="https://plus.google.com" target="_blank"><img src="/img/img3.png" style="max-width:75px;max-height: 75px;" onmouseover="this.src='/img/img3b.png'" onmouseout="this.src='/img/img3.png'" alt="Google+" width="100" height="100"></a>
+                        <a href="https://twitter.com/" target="_blank"><img src="/img/img5.png" style="max-width:75px; max-height: 75px;" onmouseover="this.src='/img/img5b.png'" onmouseout="this.src='/img/img5.png'" alt="twitter" width="100" height="100"></a>
                     </div>
                 </div>
                 <div class="panel">
