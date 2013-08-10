@@ -6,7 +6,7 @@
         {
             var mapProp = {
                 center:new google.maps.LatLng(<?php
-                $result = exec(app_path().'python/PostCodesV5.py ' . $property->postcode);
+                $result = exec('python ' . app_path().'python/PostCodesV5.py ' . $property->postcode);
                 $json = json_decode($result);
                 echo($json['lat'] . ' ' . $json['long']);
                 ?> ),
@@ -34,24 +34,15 @@
                     <img src="http://www.ournewhaven.org.uk/images/uploaded/scaled/Lower_High_Street_Shops.jpg" style="max-width:100%;max-height:100%;margin-left:2.5%;margin-right:2.5%;" />
                 </div>
 
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:left;">Existing businesses in the area</h3>
-                    </div>
-                    <div>
-                        Yelp goes here
-                    </div>
-                </div>
-
             </div>
 
             <div class="col-lg-3">
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:center;">Existing Projects</h3>
+                        <h3 class="panel-title" style="text-align:center;">Create Project</h3>
                     </div>
                     <div style="text-align:center;">
-                        No Existing Projects
+                        <a href="/project/create/<?php echo ($property->id); ?>"><button class="btn btn-primary" style="">Create a Project!</button></a>
                     </div>
 
                 </div>
@@ -65,15 +56,6 @@
                         <strong>Owner:</strong> <br> Exeter Council <br>
                     </div>
                 </div>
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align:center;">Google Maps</h3>
-                    </div>
-                    <div>
-                        <div id="googleMap" style="width:100%;height:200px;"></div>
-                    </div>
-
-                </div>
             </div>
 
             <div class="col-lg-12">
@@ -85,7 +67,19 @@
                         <div style="width:100%;"><strong>Crime Rating: </strong> 1</div>
                     </div>
                 </div>
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="text-align:center;">Google Maps</h3>
+                    </div>
+                    <div>
+                        <div id="googleMap" style="width:100%;height:200px;"></div>
+                    </div>
+
+                </div>
             </div>
+
+
+
         </div>
 
     </div>

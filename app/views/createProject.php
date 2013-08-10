@@ -65,19 +65,17 @@
                             <div class="col-lg-4 "><img src="http://www.thepotteries.org/walks/fenton1/city_road_shops.jpg" style="max-width:100%;max-height:100%;"/></div>
                             <div class="col-lg-4">
                                 <address>
-                                    <strong>3 Awesome Street</strong><br>
-                                    Exceter<br>
-                                    EX1 2UY<br>
+                                    <strong><?php echo($property->address); ?></strong><br>
+                                    Exeter<br>
+                                    <?php echo($property->postcode); ?><br>
                                 </address>
 
                                 <strong>Monthly Rate (GBP): </strong> £1000
                             </div>
 
                             <div class="col-lg-4">
-                                <label for="target">Establish.me Ratings:</label>
+                                <label for="target">Establish.me Ratings:</label> <br>
                                 <strong style="font-size: 13px;">Crime : </strong> 4 <br>
-                                <strong style="font-size: 13px;">Example Data : </strong> 3 <br>
-                                <strong style="font-size: 13px;">Example Data: </strong> 4
 
                             </div>
 

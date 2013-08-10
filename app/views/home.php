@@ -13,12 +13,30 @@
             var map=new google.maps.Map(document.getElementById("googleMap")
                 ,mapProp);
 
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(51.508742,-0.120850),
-                map: map,
-                title: 'Hello World!'
             });
 
+            <?php
+			$properties = array(					/* ATTENTION */
+				array('name'=>'1 Shepherds Road',   /* $properties needs to be the array containing the properties */
+				'lat'=>51.508742,							/* <----- Use that format there */
+				'lng'=>-0.120850),
+				array('name'=>'2 Shepherds Road',
+				'lat'=>51.508742,
+				'lng'=>-0.130860),
+				array('name'=>'3 Shepherds Road',
+				'lat'=>51.508742,
+				'lng'=>-0.140870),
+			);
+			for ($i =0; $i < sizeOf($properties); $i++) {
+			//foreach($properties as $prop) {
+				$prop = $properties[$i];
+				echo "var marker".$i." = new google.maps.Marker({";
+				echo "position: new google.maps.LatLng(".$prop['lat'].",".$prop['lng']."),";
+				echo "map: map,";
+				echo "title: '".$prop['name']."'";
+				echo "});";
+			}
+		?>
         }
 
         google.maps.event.addDomListener(window, 'load', initialize);

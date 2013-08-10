@@ -25,7 +25,7 @@ class ProjectController extends BaseController {
             ->with('user', Sentry::getUser());
     }
 
-    public function getCreate() {
+    public function getCreate($id) {
 
         if ( Sentry::check() ) {
             $projects = Project::where('ownerid', "=", Sentry::getUser()->id);
@@ -39,8 +39,8 @@ class ProjectController extends BaseController {
                 return View::make('createProject')
                     ->with('title', 'Create Project')
                     ->with('isHome', false)
-                    ->with('user', Sentry::getUser());
-
+                    ->with('user', Sentry::getUser())
+                    ->with('property', Property::find($id) );
             }
         } else {
             return Redirect::to('user/signup');
